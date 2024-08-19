@@ -1,0 +1,40 @@
+/****************************************   IMPORT FONTS      **********************************/
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+      url('/assets/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+      url('/assets/fonts/Mona-Sans.ttf') format('ttf-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+  
+  html {
+    font-family: 'Mona Sans';
+  }
+
+/****************************************   COLORS VARIABLES      **********************************/
+
+:root{
+    /****************************************   COLORS VARIABLES      **********************************/
+    --tokena-dark-blue: #0065EA;
+    --tokena-light-blue: #006EFF;
+    --tokena-red: #CB0101;
+    --tokena-green: #01B130;
+    --tokena-yellow: ##F2D604;
+    --tokena--dark: #1D1D1D;
+    --tokena-dark-gray: #6B7280;
+    --tokena-gray: #D1D5DB;
+    --tokena-light-gray: #F3F4F6;
+    --tokena-white: #FFFFFF;
+
+    /****************************************   FONT SIZE      **********************************/
+    --main-font: 'Mono Sans';
+}
+
+/****************************************   BASE STYLE      **********************************/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
