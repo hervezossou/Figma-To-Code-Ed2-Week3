@@ -5,7 +5,7 @@
   A crypto dashboard to easily track all cryptocurrencies, have eyes on your investment, be up to date recent crypto news, and many other functionalities all in one place. This dashboard is essentilly built in Vanilla web tools : <a href="https://html.com/" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank">CSS</a>, <a href="https://www.javascript.com/" target="_blank">JavaScript</a> and deployed on <a href="https://figma-to-code-ed2-week2-gamma.vercel.app/" target="_blank">Vercel</a>.⚡
 </p>
 
-![preview](https://github.com/hervenzoghe/Figma-To-Code-Ed2-Week2/blob/main/thumbnail.png)
+![preview](https://github.com/hervenzoghe/Figma-To-Code-Ed2-Week3/blob/main/thumbnail.png)
 
 ## Tech Stack
 
