@@ -10,7 +10,61 @@
     <div class="container">
         <aside class="sidebar"></aside>
         <main class="main-container">
-
+            <div class="top-nav">
+                <div class="top-nav-left">
+                    <div class="btn-menu-toggle">
+                        <img src="./assets/icons/menu.svg" alt="menu-button">
+                    </div>
+                    <div class="welcome-message">
+                        <h2>Dashboard</h2>
+                        <p>Welcome back, John Doe</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <div class="devise-dropdown">
+                        <select id="devise">
+                            <option value="USD" selected>USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CAD">CAD</option> 
+                        </select>
+                        <div class="chevron-dropdown">
+                            <img src="./assets/icons/chevron-up-down.svg" alt="chevron-up-down">
+                        </div>
+                    </div>
+                    <div class="theme-switcher">
+                        <img src="./assets/icons/sun.svg" class="is-hidden" alt="sun">
+                        <img src="./assets/icons/moon.svg" alt="moon">
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="balance-trending">
+                    <div class="balance-card">
+                        <div class="balance-card-top">
+                            <h1>Balance</h1>
+                            <div class="balance-card-amount">
+                                <h4 class="wallet-balance">$63,755,200</h4>
+                                <div class="balance-card-badge">
+                                    <span>+2.3%</span>
+                                    <p>vs last month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="balance-card-btn">
+                            <button class="operation-card">
+                                <img src="./assets/icons/arrow-up.png" alt="arrow-up">
+                                <span>Deposite</span>
+                            </button>
+                            <button class="operation-card">
+                                <img src="./assets/icons/arrow-down.png" alt="arrow-down">
+                                <span>Withdraw</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trending-coins"></div>
+                </div>
+                <div class="crypto-table"></div>
+            </div>
         </main>
     </div>
     <script defer src="./assets/js/index.js"></script>
