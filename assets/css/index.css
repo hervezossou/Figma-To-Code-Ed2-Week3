@@ -484,6 +484,10 @@ html {
     left: 0;
   }
 
+  #toggle-sidebar {
+    display: none;
+  }
+  
   .container {
     display: flex;
     align-items: flex-start;
