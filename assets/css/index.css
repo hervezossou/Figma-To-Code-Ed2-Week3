@@ -1,12 +1,5 @@
 /****************************************   IMPORT FONTS      **********************************/
-@font-face {
-    font-family: 'Mona Sans';
-    src:
-      url('/assets/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-      url('/assets/fonts/Mona-Sans.ttf') format('ttf-variations');
-    font-weight: 200 900;
-    font-stretch: 75% 125%;
-  }
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
 
 /****************************************   COLORS VARIABLES      **********************************/
 
@@ -25,7 +18,6 @@
     --tokena-btn-bg: #43ff640f;
 
     /****************************************   FONT SIZE      **********************************/
-    --main-font: 'Mono Sans';
     --text-xxs: 0.625rem; /* 10px */
     --text-xs: 0.75rem; /* 12px */
     --text-sm: 0.875rem; /* 14px */
@@ -46,7 +38,7 @@
 }
 
 html {
-  font-family: var(--main-font);
+  font-family: 'Mono Sans', sans-serif;
 }
 
 /****************************************   TOP NAV      **********************************/
@@ -252,5 +244,5 @@ html {
 }
 
 .operation-card img {
-  color: var(--tokena-light-blue);
+  stroke: var(--tokena-dark-blue);
 }
