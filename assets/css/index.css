@@ -487,13 +487,22 @@ html {
   #toggle-sidebar {
     display: none;
   }
-  
-  .container {
+
+  .main-container {
     display: flex;
-    align-items: flex-start;
+  }
+
+  .main-content {
+    width: 1000px;
+  }
+
+  .balance-trending {
+    width: 316px;
   }
 }
 
 @media screen and (min-width:1440px){
-  
+  .main-content {
+    width: 1200px;
+  }
 }
