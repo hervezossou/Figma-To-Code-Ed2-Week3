@@ -349,9 +349,9 @@ html {
 }
 
 
-/****************************************   TOP NAV      **********************************/
+/****************************************   BALANCE & TRENDING      **********************************/
 .balance-trending {
-  width: 335px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -459,6 +459,40 @@ html {
   stroke: var(--tokena-dark-blue);
 }
 
+.trending-container {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trending-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+}
+
+.view-more-trending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.view-more-trending a {
+  text-decoration: none;
+  color: var(--tokena-dark-gray);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.view-more-trending img {
+  width: 14px;
+  height: 14px;
+  filter: invert(25%) brightness(150%) contrast(200%) ;
+}
+
 /****************************************   RESPONSIVENESS      **********************************/
 
 @media screen and (min-width:425px){
@@ -493,7 +527,7 @@ html {
   }
 
   .main-content {
-    width: 1000px;
+    width: 100%;
   }
 
   .balance-trending {
@@ -503,6 +537,6 @@ html {
 
 @media screen and (min-width:1440px){
   .main-content {
-    width: 1200px;
+    width: 100%;
   }
 }

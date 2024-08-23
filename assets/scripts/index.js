@@ -17,3 +17,4 @@ document.onclick = function(e) {
       sidebar.classList.remove('active')
     }
   }
+
