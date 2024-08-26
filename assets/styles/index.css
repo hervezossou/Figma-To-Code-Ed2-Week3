@@ -46,6 +46,15 @@ html {
   font-family: 'Mono Sans', sans-serif;
 }
 
+/****************************************   MAIN CONTENT      **********************************/
+.main-content {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 28px;
+}
+
 /****************************************   SIDEBAR NAV      **********************************/
 #sidebar {
   width: 240px;

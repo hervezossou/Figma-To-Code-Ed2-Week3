@@ -79,7 +79,7 @@ function fetchTrendingCoinsData(apiUrl) {
 
     // Trending Card Bottom Content
     const trendingCardPrice = document.createElement('h2')
-    trendingCardPrice.textContent = `${(element.item.data.price).toFixed(2) + 'USD'}`
+    trendingCardPrice.textContent = `${(element.item.data.price).toFixed(4) + ' ' + 'USD'}`
     trendingCardPrice.classList.add('trending-card-price')
     const trendingCardVolume = document.createElement('h3')
     trendingCardVolume.textContent = `${(element.item.data.total_volume)}`
