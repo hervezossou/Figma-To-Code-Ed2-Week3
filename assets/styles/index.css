@@ -48,7 +48,6 @@ html {
 
 /****************************************   MAIN CONTENT      **********************************/
 .main-content {
-  width: 335px;
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -691,6 +690,56 @@ html {
   color: var(--tokena-dark-gray);
   line-height: -0.4%;
 }
+
+/****************************************   CRYPTO TABLE  **********************************/
+.market-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid var(--tokena-light-gray);
+  margin-inline: 20px;
+  padding: 10px;
+}
+
+.market-heading {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+}
+
+.market-heading h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: -0.4%;
+  color: var(--tokena--dark);
+}
+
+.show-more {
+  width: 36px;
+  height: 36px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--tokena-light-gray);
+  background: var(--tokena-white);
+}
+
+.show-more svg {
+  margin: -4px -9px;
+}
+
+.market-table {
+  height: 724px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 
 /****************************************   RESPONSIVENESS      **********************************/
 
