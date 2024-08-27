@@ -702,6 +702,7 @@ html {
   border: 1px solid var(--tokena-light-gray);
   margin-inline: 20px;
   padding: 10px;
+  gap: 10px;
 }
 
 .market-heading {
@@ -733,11 +734,54 @@ html {
 }
 
 .market-table {
-  height: 724px;
+  max-width: 1152px;
+  min-height: 724px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  border-collapse: collapse;
+  overflow: hidden;
+  overflow-x: scroll;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: -0.4%;
+  color: var(--tokena--dark);
+}
+
+thead {
+  width: 1152px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-cell {
+  height: 44px;
+  padding: 12px 24px;
+  gap: 10px;
+  border-bottom: 1px solid var(--tokena-gray);
+  background: var(--tokena-light-gray);
+}
+
+.header-cell:nth-child(n+2) {
+  width: 186px;
+  max-width: 201.5px;
+}
+
+.item-cell {
+  display: flex;
+  height: 56px;
+  padding: 12px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--tokena-gray);
+  background: var(--tokena-white);
+}
+
+.item-cell:nth-child(n+2) {
+  width: 186px;
+  max-width: 201.5px;
 }
 
 

@@ -44,14 +44,6 @@ function fetchTrendingCoinsData(apiUrl) {
       throw error; // Re-throw the error for further handling
     });
 }
-/*
- async function showTrendingCoinsData () {
-  const trendingCoinsData = await fetchTrendingCoinsData(baseUrl)
-  console.log(trendingCoinsData)
- }
-
- showTrendingCoinsData()*/
-
 
  // Building trending card 
 
