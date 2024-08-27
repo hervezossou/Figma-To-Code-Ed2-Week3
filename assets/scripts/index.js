@@ -27,8 +27,8 @@ const options = {
   headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-Ujp4EVpLRtc6VmW9cKTEswHo'}
 }
 
-function fetchTrendingCoinsData(apiUrl) {
-  return fetch(apiUrl + 'search/trending')
+async function fetchTrendingCoinsData(apiUrl) {
+  return fetch(apiUrl + 'search/trending', options)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not okay');
@@ -141,6 +141,121 @@ function fetchTrendingCoinsData(apiUrl) {
   }
  )}
 
- document.addEventListener('DOMContentLoaded', () => {
+async function fetchMarketData(apiUrl) {
+  return fetch(apiUrl + 'coins/markets?vs_currency=usd', options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not okay');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const cryptoMarketData = data;
+      return cryptoMarketData;
+    })
+    .catch(error => {
+      console.error('Error fetching trending coins data:', error);
+      throw error; // Re-throw the error for further handling
+    });
+}
+
+//Building Table Row for our Dashboard
+
+function createTableRow(crypto) {
+  const tableRow = document.createElement('tr')
+  tableRow.classList.add('table-row')
+
+  // Colonne du rang
+  const rankCell = document.createElement('td')
+  rankCell.textContent = crypto.market_cap_rank
+  rankCell.classList.add('item-cell')
+  tableRow.appendChild(rankCell)
+
+  // Colonne de l'image et du nom
+  const nameAndImageCell = document.createElement('td')
+  const image = document.createElement('img')
+  image.src = crypto.image;
+  nameAndImageCell.appendChild(image)
+  nameAndImageCell.appendChild(document.createTextNode(` ${crypto.name}-${crypto.symbol.toUpperCase()}`))
+  nameAndImageCell.classList.add('item-cell')
+  tableRow.appendChild(nameAndImageCell)
+
+  // Colonne du prix
+  const priceCell = document.createElement('td')
+  priceCell.textContent = `$${crypto.current_price.toLocaleString('en-US')}`
+  priceCell.classList.add('item-cell')
+  tableRow.appendChild(priceCell)
+
+  // Colonne du pourcentage de changement de prix
+  const priceChangeCell = document.createElement('td')
+  priceChangeCell.textContent = `${crypto.price_change_percentage_24h.toFixed(1)}%`
+  priceChangeCell.classList.add('item-cell')
+  tableRow.appendChild(priceChangeCell)
+
+  const pricePercentage = crypto.price_change_percentage_24h
+    
+    if (pricePercentage > 0) {
+      priceChangeCell.classList.add('positive', 'text-positive')
+      priceChangeCell.classList.remove('negative', 'text-negative')
+    } else if (pricePercentage < 0) {
+      priceChangeCell.classList.add('negative', 'text-negative')
+      priceChangeCell.classList.remove('positive', 'text-positive')
+    } else {
+      priceChangeCell.classList.add('neutral', 'text-neutral')
+    }
+
+  // Colonne du volume total
+  const volumeCell = document.createElement('td')
+  volumeCell.textContent = `$${crypto.total_volume.toLocaleString('en-US')}`
+  volumeCell.classList.add('item-cell')
+  tableRow.appendChild(volumeCell)
+
+  // Colonne de la capitalisation boursière
+  const marketCapCell = document.createElement('td')
+  marketCapCell.textContent = `$${crypto.market_cap.toLocaleString('en-US')}`
+  marketCapCell.classList.add('item-cell')
+  tableRow.appendChild(marketCapCell)
+
+  // Colonne du graphique (à compléter avec votre bibliothèque de graphiques préférée)
+  const graphCell = document.createElement('td')
+  graphCell.classList.add('item-cell')
+  // Ici, vous ajouteriez votre code pour créer le graphique
+  // Par exemple, avec Chart.js:
+  // const canvas = document.createElement('canvas');
+  // graphCell.appendChild(canvas);
+  // // ... Configuration de votre graphique Chart.js
+  tableRow.appendChild(graphCell);
+
+  return tableRow;
+}
+
+// Build Crypto Table Body
+
+// Our Crypto Table Body target
+const tbody = document.getElementById('crypto-table-body'); // Remplacez par l'ID de votre tbody
+
+// Our creating and displaying function
+
+async function fetchAndDisplayData() {
+  try {
+    // Récupérer les données depuis l'API
+    cryptoMarketData = await fetchMarketData(baseUrl);
+
+    // Sélectionner le tbody du tableau
+    const tbody = document.getElementById('crypto-table-body');
+
+    // Créer les lignes du tableau
+    cryptoMarketData.forEach(crypto => {
+      const row = createTableRow(crypto);
+      tbody.appendChild(row);
+    });
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données :', error);
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
   buildTrendingCard('.trending-card-container')
+  fetchAndDisplayData()
 })

@@ -594,24 +594,27 @@ html {
   background: var(--red-badge);
 }
 
-.text-negative {
+.text-negative, table td.text-negative{
   color: var(--tokena-red);
+  font-size: var(--text-xs);
 }
 
 .positive {
   background: var(--green-badge);
 }
 
-.text-positive {
+.text-positive, table td.text-positive {
   color: var(--tokena-green);
+  font-size: var(--text-xs);
 }
 
 .neutral {
   background: var(--tokena-light-gray) ;
 }
 
-.text-neutral {
+.text-neutral, table td.text-neutral {
   color: var(--tokena-dark-gray);
+  font-size: var(--text-xs);
 }
 
 .trending-card-bottom {
@@ -768,6 +771,13 @@ thead {
   max-width: 201.5px;
 }
 
+.table-row {
+  width: 1152px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .item-cell {
   display: flex;
   height: 56px;
@@ -784,6 +794,11 @@ thead {
   max-width: 201.5px;
 }
 
+.item-cell img {
+  width: 18px;
+  height: 18px;
+  border-radius: 24px;
+}
 
 /****************************************   RESPONSIVENESS      **********************************/
 
