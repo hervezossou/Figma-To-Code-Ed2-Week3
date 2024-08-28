@@ -586,35 +586,39 @@ html {
   gap: 3px;
   border-radius: 100px;
   font-size: var(--text-xxs);
-  font-weight: 600;
-  line-height: -0.4%;
 }
 
 .negative {
   background: var(--red-badge);
 }
 
-.text-negative, table td.text-negative{
+.text-negative{
   color: var(--tokena-red);
   font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: -0.4%;
 }
 
 .positive {
   background: var(--green-badge);
 }
 
-.text-positive, table td.text-positive {
+.text-positive {
   color: var(--tokena-green);
   font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: -0.4%;
 }
 
 .neutral {
   background: var(--tokena-light-gray) ;
 }
 
-.text-neutral, table td.text-neutral {
+.text-neutral{
   color: var(--tokena-dark-gray);
   font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: -0.4%;
 }
 
 .trending-card-bottom {
@@ -798,6 +802,43 @@ thead {
   width: 18px;
   height: 18px;
   border-radius: 24px;
+}
+
+.colored-text-positive {
+  width: 49px;
+  height: 24px;
+  background-color: var(--green-badge);
+  padding: 4px 8px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--tokena-green);
+  line-height: -0.4%;
+}
+
+.colored-text-negative {
+  width: 49px;
+  height: 24px;
+  background-color: var(--red-badge);
+  padding: 4px 8px;
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--tokena-red);
+  line-height: -0.4%;
+}
+
+.colored-text-neutral {
+  width: 49px;
+  height: 24px;
+  background-color: var(--tokena-light-gray);
+  padding: 4px 8px;
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--tokena-dark-gray);
+  line-height: -0.4%;
 }
 
 /****************************************   RESPONSIVENESS      **********************************/

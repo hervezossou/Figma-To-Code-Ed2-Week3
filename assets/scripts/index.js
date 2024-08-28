@@ -188,20 +188,22 @@ function createTableRow(crypto) {
 
   // Colonne du pourcentage de changement de prix
   const priceChangeCell = document.createElement('td')
-  priceChangeCell.textContent = `${crypto.price_change_percentage_24h.toFixed(1)}%`
+  const priceChangeCellContent = document.createElement('div')
+  priceChangeCellContent.textContent = `${crypto.price_change_percentage_24h.toFixed(1)}%`
+  priceChangeCell.appendChild(priceChangeCellContent)
   priceChangeCell.classList.add('item-cell')
   tableRow.appendChild(priceChangeCell)
 
   const pricePercentage = crypto.price_change_percentage_24h
     
     if (pricePercentage > 0) {
-      priceChangeCell.classList.add('positive', 'text-positive')
-      priceChangeCell.classList.remove('negative', 'text-negative')
+      priceChangeCellContent.classList.add('colored-text-positive')
+      priceChangeCellContent.classList.remove('colored-text-negative')
     } else if (pricePercentage < 0) {
-      priceChangeCell.classList.add('negative', 'text-negative')
-      priceChangeCell.classList.remove('positive', 'text-positive')
+      priceChangeCellContent.classList.add('colored-text-negative')
+      priceChangeCellContent.classList.remove('colored-text-positive')
     } else {
-      priceChangeCell.classList.add('neutral', 'text-neutral')
+      priceChangeCellContent.classList.add('text-neutral')
     }
 
   // Colonne du volume total
