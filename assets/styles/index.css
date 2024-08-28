@@ -173,10 +173,6 @@ html {
   color: var(--tokena-white);
 }
 
-.sidebar-menu-list-item:first-child img {
-  filter: invert(100%) brightness(200%) contrast(200%);
-}
-
 .sidebar-menu-list-item:hover {
   border-radius: 10px;
   border: 1px solid var(--tokena-light-blue);
@@ -195,10 +191,6 @@ html {
   font-weight: 600;
   line-height: var(--main-line-height);
   color: var(--tokena-dark);
-}
-
-.sidebar-menu-anchor:hover img {
-  filter: invert(100%) brightness(200%) contrast(200%);
 }
 
 .user-profile {
@@ -498,12 +490,6 @@ html {
   font-weight: 500;
 }
 
-.view-more-trending img {
-  width: 14px;
-  height: 14px;
-  filter: invert(25%) brightness(150%) contrast(200%) ;
-}
-
 
 /****************************************   TRENDING CONTAINER     **********************************/
 .trending-card-container {
@@ -675,12 +661,6 @@ html {
   line-height: -0.4%;
 }
 
-.search-icon {
-  width: 18px;
-  height: 18px;
-  stroke: var(--tokena-dark-gray);
-}
-
 #crypto-category {
   width: 335px;
   height: 40px;
@@ -771,9 +751,17 @@ thead {
   background: var(--tokena-light-gray);
 }
 
-.header-cell:nth-child(n+2) {
+.header-cell:first-child {
+  width: 56px;
+}
+
+.header-cell:nth-child(n+2), .item-cell:nth-child(n+2) {
   width: 186px;
   max-width: 201.5px;
+}
+
+.header-cell:last-child, .item-cell:last-child {
+  width: 180px;
 }
 
 .table-row {
