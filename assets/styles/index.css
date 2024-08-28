@@ -708,16 +708,17 @@ html {
   border-radius: 12px;
   border: 1px solid var(--tokena-light-gray);
   margin-inline: 20px;
-  padding: 10px;
+  padding: 0;
   gap: 10px;
 }
 
 .market-heading {
-  height: 36px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: auto;
+  padding: 16px;
 }
 
 .market-heading h3 {
@@ -864,6 +865,10 @@ thead {
     width: inherit;
   }
 
+  .operation-card {
+    width: 175px;
+  }
+
   .trending-container {
     width: inherit;
   }
@@ -875,6 +880,10 @@ thead {
 
   .trending-card {
     width: 185px;
+  }
+
+  #search-form, #crypto-category {
+    width: 385px;
   }
 }
 
@@ -893,6 +902,7 @@ thead {
 @media screen and (min-width:768px) {
   .main-content {
     padding-inline: 20px;
+    gap: 64px;
   }
 
   /* TRENDING SECTION */
@@ -935,6 +945,24 @@ thead {
   .trending-card-top {
     justify-content: space-between;
   }
+
+  /* SEARCH BAR AND CATEGORY FILTER */
+  .search-category {
+    width: 720px;
+    height: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: auto;
+    margin-top: 36px;
+  }
+
+  #search-form {
+    width: 312px;
+  }
+
+  #crypto-category {
+    width: 234px;
+  }
 }
 
 @media screen and (min-width:1024px){
@@ -960,7 +988,7 @@ thead {
 
   /* TRENDING SECTION */
   .balance-trending {
-    width: 700px;
+    width: 950px;
   }
 
   .balance-card {
@@ -974,45 +1002,74 @@ thead {
   }
 
   .balance-card-btn {
-    width: 700px;
+    width: 950px;
   }
 
   .operation-card {
-    width: 330px;
+    width: 455px;
   }
 
   .trending-container {
-    width: inherit;
+    width: 950px;
     height: 134px;
   }
 
   .trending-card-container {
-    width: 720px;
-    gap: 12px;
+    width: 950px;
   }
 
   .trending-card {
-    width: 335px;
+    width: 350px;
   }
 
   .trending-card-top {
     justify-content: space-between;
   }
 
+  .search-category {
+    width: 990px;
+  }
+
+  #search-form {
+    width: 312px;
+  }
+
+  #crypto-category {
+    width: 234px;
+  }
+  
+  .market-heading {
+    height: 68px;
+  }
 }
 
 @media screen and (min-width:1440px){
-  .main-content {
-    width: 100%;
-    padding: 24px;
+  #sidebar {
+    width: 240px;
   }
 
+  .main-container {
+    width: 1200px;
+  }
+
+  .main-content {
+    width: 1200px;
+    gap: 38px;
+  }
+
+  .top-nav {
+    width: 1270px;
+    margin-inline: -24px;
+  }
   
   /* TRENDING SECTION */
   .balance-trending {
-    width: 1152px;
+    width: 1200px;
     height: 134px;
     flex-direction: row;
+    gap: 22px;
+    margin-top: -24px;
+    padding-inline: 0;
   }
 
   .balance-card {
@@ -1039,17 +1096,35 @@ thead {
 
   .trending-card-container {
     width: 814px;
-    gap: 12px;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    justify-content: space-between;
   }
 
   .trending-card {
     width: 199px;
     height: 94px;
+    padding: 12px;
   }
 
   .trending-card-top {
     justify-content: space-between;
+  }
+
+  .search-category {
+    width: 1200px;
+    margin: 0;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .market-data {
+    width: 1200px;
+    margin: 0;
+  }
+
+  .market-table {
+    width: auto;
   }
 }
