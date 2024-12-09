@@ -26,4 +26,4 @@ If you are looking for a figma file, you can find it **[here](https://www.figma.
 
 ## License 
 
-Licensed under the [MIT License](https://github.com/hervenzoghe/Figma-To-Code-Ed2-Week3/blob/main/LICENSE)
+Licensed under the [MIT License](https://github.com/hervezossou/Figma-To-Code-Ed2-Week3/blob/main/LICENSE)
